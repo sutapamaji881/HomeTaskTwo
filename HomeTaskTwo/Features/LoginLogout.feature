@@ -1,6 +1,6 @@
 ﻿Feature: Login and logout in the system
 
-@smoke
+@UserLoginFeature
   Scenario: Login with invalid credentials
     Given login page is opened
     And user is not logged in

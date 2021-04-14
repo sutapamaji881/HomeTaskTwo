@@ -3,7 +3,7 @@
   As an customer
   I want to create an account
 
-
+@UserRegistrationFeature
 Scenario: Try to create account with duplicate email id
     Given create account page is opened
     When user enters duplicate email id and submits it
