@@ -49,7 +49,7 @@ namespace HomeTaskTwo.Main.Pages
             if (isDisplayed(btnLogOut))
             {
                 btnLogOut.Click();
-                
+
             }
         }
 
@@ -73,6 +73,26 @@ namespace HomeTaskTwo.Main.Pages
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.ElementToBeClickable(btnLogOut));
             btnLogOut.Click();
+        }
+
+        [Obsolete]
+        public void clickOnLoginButton()
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.ElementToBeClickable(btnLogOut));
+            btnSignIn.Click();
+        }
+
+        public void enterEmail(String emailId)
+        {
+            txtEmailId.SendKeys("");
+            txtEmailId.SendKeys(emailId);
+        }
+
+        public void enterPassword(String password)
+        {
+            txtPassword.SendKeys("");
+            txtPassword.SendKeys(password);
         }
     }
 }
